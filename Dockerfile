@@ -20,8 +20,9 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.debug='docker logs $CONTAINER' \
       io.github.offensive-security.docker.dockerfile="Dockerfile" \
       io.github.offensive-security.license="GPLv3" \
-      MAINTAINER="Steev Klimaszewski <steev@kali.org>"
-RUN mkdir /datak &amp;&amp; touch /datak/x
+      MAINTAINER="RedOracle <info@redoracle.com>"
+RUN mkdir /datak 
+RUN touch /datak/x
 VOLUME /datak
 RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
     echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
@@ -32,3 +33,5 @@ RUN set -x \
     && apt-get -yqq install kali-linux-pwtools kali-linux-forensic \
     && apt-get clean
 CMD ["bash"]
+
+EXPOSE 9999
