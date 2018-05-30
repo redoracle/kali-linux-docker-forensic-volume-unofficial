@@ -29,5 +29,6 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN set -x \
     && apt-get -yqq update \
     && apt-get -yqq dist-upgrade \
+    && apt-get -yqq install kali-linux-pwtools kali-linux-forensic \
     && apt-get clean
 CMD ["bash"]
