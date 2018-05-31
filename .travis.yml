@@ -4,7 +4,6 @@ services:
 env:
   global:
     - IMAGE_NAME=redoracle/kali-linux-docker-forensic-volume-unofficial
-    - secure: "NL6g0P2FkxUXA1Kd0T/nbnaooj3TqsfFL8uNwR1e21KQHS09l83293+VLeQEubrkIvt0jt69A4gAeuPj7oNZrnTpJTUqI/s1bdmij6bIEmgg55I+RL462ZarwLq+iPL/T8FdVFYdgt8VfCcyfwNy3ZcqkB0opd+Y3NSKFlhldEsdZyhAfTZaqZSMOEPEw+jwr7i8xazSHJnY4E7VrilNPIYRap9Opp0Cn9BclfkqM7vd82bECv0fGSbDPXxn2G8WKeBbQ5I592fBoBjWf1rV5hJD8PoCOzNbs6BxtA9ii0Uy0UpJlfDPXkbg2Fgso0mX7t3HLHCiHPc1QWl+X6NU/LJ1bcbbL/9EEkl2Yq5wvuvt9ppYc2EsmlnH8s7jm+x3nYmXBOpRkOSJws1zuWD+lq2XbWdNHu+BOG5GaY2gPmUQnFstGsxdY/iWcppKR4pV+aN0X6wwpWidG8h6vsHXUVCA2ngaMtK4MM8RnJNy7JeOZGQVfbJqJ5qUeePakl6OoDlQCMPxD9p5tTUOFgx7R+0GjW/Ky35r3M7tywFulmlFXbhwxx6vAL365nQJ65FQYwehxsy0H1rh9Fx7Sn0s86+i09gUXp2qudaJlYTIaBzapVBg1aQ+YgIO60gLmq0xJFh6L3RrPaN/P2auko2+z24lxYTinXKGR2N49Kj8aH4="
 before_script:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   - version=latest
