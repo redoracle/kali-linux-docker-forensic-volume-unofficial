@@ -4,12 +4,9 @@ services:
 env:
   global:
     - IMAGE_NAME=redoracle/kali-linux-docker-forensic-volume-unofficial
-    - DOCKER_USERNAME=redoracle
-    - secure: "f1J78KbV/cZ0Qe9XSvdCFw/7jRcfWc+vhJo9PWlgbwPLrkFQzfmY9s5GAgezWrmFu1eyJzrJ294pKJGfCc/OnVVu9YtBR6r2eVNmLxC5rB2dUR1jMKMAQmAvh7s1v3xFQDrHn5Y2NHUSApdN4kjiQn1gqtu3+GOb7WZMjB4kLcZqHT91k8SD5Y8c+IHinUQfX3r4k1IsvsOg1X4JF2Jh4F56fF7g78P85kesKfZQZjQqP/BezeRg/MtKoJptBBTMWo5EYfPoxqLfXiRqxHrmFSap0YdaqDdbLU1kYt+5slTyZoUP/U1gHIpkU5kxMSOUKrjRYXo/Us6GixaGFd7Q7ay4pyEJDrhyJ7gnouZfCMPsWAjPoWmbEtDdBQPyX1wa8WxUOW6xrSn0tCn7vn+j6C6J+xUYZ+6XqYk40mFdvz5gysLWf/dI07RITr2odXq/sVeoIAEeShIxjmAgrjg91/hAE1SNkswnkBviZ1qx0462rREVgh2uBZHlO8nVfYPR99HEXvQmo8HKnHUEHn0cW03OtkpbeeTAb/q+do04zF/KIHQI1IRSSzNgYXPukPO87x4LAq7LKhwTRklUp20plFrsuC+qeUnhXoBX9o79qpmu8r5rCePys0KwKpe7jtPnXL/SQfFrTiyj9sClLcZE8TBQ88KczKE+q/WtrY0Q7t0="
 
 before_script:
-  - echo $IMAGE_NAME $DOCKER_USERNAME $DOCKER_PASSWORD
-  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin $DOCKER_PASSWORD
   - version=latest
   - docker pull "$IMAGE_NAME" || true
 script:
