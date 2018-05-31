@@ -6,6 +6,7 @@ env:
     - IMAGE_NAME=redoracle/kali-linux-docker-forensic-volume-unofficial
     
 before_script:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
   - version=latest
   - docker pull "$IMAGE_NAME" || true
 script:
@@ -13,7 +14,7 @@ script:
 
 after_script:
   - docker images
-  
+
 deploy:
   provider: script
   script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${version}"
