@@ -1,14 +1,21 @@
+sudo: required
+services:
+  - docker
+env:
+  global:
+    - IMAGE_NAME=redoracle/kali-linux-docker-forensic-volume-unofficial
+    
+before_script:
+  - version=latest
+  - docker pull "$IMAGE_NAME" || true
+script:
+  - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
 
-before_install:
-- rvm install 2.1.5
-language: ruby
-sudo: false
-cache: bundler
-rvm:
-- 2.0.0
-- 2.1.0
-- 2.1.3
-- jruby
-os:
-- linux
-
+after_script:
+  - docker images
+  
+deploy:
+  provider: script
+  script: docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${version}"
+  on:
+    branch: master
