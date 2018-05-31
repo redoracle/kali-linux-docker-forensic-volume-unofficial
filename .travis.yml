@@ -1,9 +1,9 @@
 sudo: required
 services:
   - docker
-  
+
 before_script:
-  - echo "$DOCKER_USERNAME DOCKER_PASSWORD"
+  - echo "$IMAGE_NAME $DOCKER_USERNAME DOCKER_PASSWORD"
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - version=latest
   - docker pull "$IMAGE_NAME" || true
