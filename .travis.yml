@@ -1,10 +1,7 @@
 sudo: required
 services:
   - docker
-env:
-  global:
-    - IMAGE_NAME=redoracle/kali-linux-docker-forensic-volume-unofficial
-    - DOCKER_USERNAME=redoracle
+  
 before_script:
   - echo "$DOCKER_USERNAME DOCKER_PASSWORD"
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
