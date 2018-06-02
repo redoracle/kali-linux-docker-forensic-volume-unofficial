@@ -7,52 +7,52 @@ For details about Kali Linux metapackages, check https://www.kali.org/news/kali-
 
 Docker: https://hub.docker.com/r/redoracle/kali-linux-docker-forensic-volume-unofficial/
 
-We can find those tools at Kali Linux -> Forensics and Kali Linux -> Password Attacks.
+`We can find those tools at Kali Linux -> Forensics and Kali Linux -> Password Attacks.`
 
-As you can see, Kali subdivides its forensic tools into multiple categories. These include the following:
+__As you can see, Kali subdivides its forensic tools into multiple categories.__
 
-Anti-Virus Forensic Tools
-Digital Anti-Forensic Tools
-Digital Forensics
-Forensic Analysis Tools
-Forensic Craving Tools
-Forensic Hashing Tools
-Forensic Imaging Tools
-Forensic Suites
-Network Forensics
-Password Forensics Tools
-PDF Forensic Tools
-RAM Forensic Tools
+1. AntiVirus Forensic Tools
+2. Digital AntiForensic Tools
+3. Digital Forensics
+4. Forensic Analysis Tools
+5. Forensic Craving Tools
+6. Forensic Hashing Tools
+7. Forensic Imaging Tools
+8. Forensic Suites
+9. Network Forensics
+10. Password Forensics Tools
+11. PDF Forensic Tools
+12. RAM Forensic Tools
 
 Each one of these areas includes multiple tools for doing similar tasks. I will try to demonstrate the best tools and include the theory behind the techniques.
 
 Those following are the forensic's toolset more used:
-Autopsy
-binwalk
-foremost
-galleta 
-hashdeep
-volafox
-volatily
+- Autopsy
+- binwalk
+- foremost
+- galleta 
+- hashdeep
+- volafox
+- volatily
 
 
-Kali also subdivides its "Password Attacks" tools into multiple categories. These include the following:
+__Kali also subdivides its "Password Attacks" tools into multiple categories. These include the following:__
 
-Offiline Attacks
-Online Attacks
-Passing the hash tools
-Password Profiling and wordlists
+1. Offiline Attacks
+2. Online Attacks
+3. Passing the hash tools
+4. Password Profiling and wordlists
 
 
 Those following are the "Password Attacks" toolset more used:
-cewl
-crunch
-hashcat
-jhon
-jhonny
-medusa 
-ncrack
-ophcrack
-pyrit
-rainbowcrack
-rcracki_mt
+- cewl
+- crunch
+- hashcat
+- jhon
+- jhonny
+- medusa 
+- ncrack
+- ophcrack
+- pyrit
+- rainbowcrack
+- rcracki_mt
