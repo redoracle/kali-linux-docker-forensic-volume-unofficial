@@ -37,4 +37,4 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 CMD ["bash"]
 
-EXPOSE 9999
+EXPOSE 80:9999
