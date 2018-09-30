@@ -33,9 +33,10 @@ RUN set -x \
     && apt-get -yqq update \
     && apt-get -yqq dist-upgrade \
     && apt-get -yqq install kali-linux-forensic \
-    && apt-get -yqq install kali-linux-pwtools kali-linux-forensic \
+    && apt-get -yqq install kali-linux-pwtools \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    
 CMD ["bash"]
 
 EXPOSE 80 9999 
