@@ -23,7 +23,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       io.github.offensive-security.docker.dockerfile="Dockerfile" \
       io.github.offensive-security.license="GPLv3" \
       MAINTAINER="RedOracle <info@redoracle.com>"
-RUN mkdir /datak 
+
 RUN touch /datak/x
 VOLUME /datak
 RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
