@@ -1,4 +1,4 @@
-FROM kalilinux/kali-linux-docker
+FROM redoracle/kali-linux-docker-forensic-volume-unofficial
 MAINTAINER RedOracle
 
 # Metadata params
@@ -32,6 +32,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN set -x \
     && apt-get -yqq update \
     && apt-get -yqq dist-upgrade \
+    && apt-get -yqq install kali-linux-forensic \
     && apt-get -yqq install kali-linux-pwtools kali-linux-forensic \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
