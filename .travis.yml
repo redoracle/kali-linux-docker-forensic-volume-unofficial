@@ -9,11 +9,9 @@ before_script:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 script:
-  - docker build -t "$IMAGE_NAME" .
+  - docker build -t "${IMAGE_NAME}:latest" .
 
 after_script:
-  - docker images
-  - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
 
 deploy:
   provider: script
