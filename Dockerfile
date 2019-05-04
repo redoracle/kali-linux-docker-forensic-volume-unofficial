@@ -24,11 +24,12 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       io.github.offensive-security.license="GPLv3" \
       MAINTAINER="RedOracle <info@redoracle.com>"
 
-RUN touch /datak/x
+#RUN touch /datak/x
 VOLUME /datak
 
 RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
     echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+    
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN set -x \
